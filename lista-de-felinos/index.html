@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Felinos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class='checkbox-div'>
+            <input type="checkbox" name="" id="switch">
+            <label for="switch" class="checkbox-label"></label>
+        </div>
+        <div class='novo-felino'>
+            <div class='div-btn'>
+                <button class='btn-novo-felino'>Adicionar um novo felino à lista</button>
+            </div>
+            <div class='modal-novo-felino modal-fechado'>
+                
+                <label for="titulo-novo-felino">Título</label>
+                <input type="text" id='titulo-novo-felino' maxlength="15" class='input-novo-felino'>
+                <label for="imagem-novo-felino">Insira uma URL de uma imagem do felino</label>
+                <input type="text" name="imagem" id="imagem-novo-felino" class='input-novo-felino'>
+                <label for="descricao-novo-felino">Descrição do felino</label>
+                <textarea name="descricao-novo-felino" rows="10" id='descricao-novo-felino' maxlength="360"
+                    class='input-novo-felino'></textarea>
+                <label for="data-criacao-novo-felino">Data de criação</label>
+                <input type="datetime-local" id='data-criacao-novo-felino' class='input-novo-felino'>
+
+                <div class='btns-adicionar-sair'>
+                    <button onclick="sair()">Sair</button>
+                    <button onclick="adicionarFelino()">Adicionar</button>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <select name="felinos" id="felinos" onchange="location = this.value">
+                <option value="#" selected>SELECIONE UM ANIMAL</option>
+            </select>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Lista de Felinos</h1>
+        <Section class='lista-felinos'>
+        </Section>
+        <script src="./script.js"></script>
+
+    </main>
+</body>
+
+</html>

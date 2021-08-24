@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+html{
+  font-size: 62.5%;
+}
+
+:root{
+  --btn-bgc: rgb(42, 42, 42);
+  --body-bgc: rgb(255, 255, 255);
+  --h2-color: rgb(156, 156, 156);
+  --p-color: rgb(71, 71, 71);
+  --li-bgc: white;
+  --box-shadow-img-felino: 0.1rem 0.1rem 1rem black;
+}
+
+.modo-noturno:root{
+  --btn-bgc: rgb(219, 219, 219);
+  --body-bgc: rgb(42, 42, 42);
+  --h2-color: rgb(255, 255, 255);
+  --p-color: rgb(255, 255, 255);
+  --li-bgc: rgb(32, 32, 32);
+  --box-shadow-img-felino: 0.1rem 0.1rem 1rem rgb(230, 253, 98);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--body-bgc);
+  transition: background-color .5s;
+}
+
+header{
+  padding: 2rem;
+}
+
+/* h1 {
+  text-align: center;
+  margin: 2em 0;
+  color: var(--h1-color);
+  font-size: 3em;
+  transition: color .5s;
+} */
+
+.checkbox-div{
+  width: 5.5rem;
+  height: 2.6rem;
+  display: flex;
+  border: 2px solid black;
+  background-color: rgb(187, 190, 190);
+  border-radius: 2rem;
+  align-items: center;
+  
+}
+
+.checkbox-label{
+  display: block;
+  width: 40%;
+  height: 75%;
+  border: 2px solid #000000;
+  background-color: #fabf1f;
+  margin-left: .1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: transform .5s ease-in-out, border-top-right-radius .3s ease-in-out, border-bottom-right-radius .3s ease-in-out;
+
+}
+
+#switch{
+  display: none;
+}
+
+#switch:checked + .checkbox-label{
+  transform: translateX(75%);
+  background-color: transparent;
+  border-top-right-radius: 95%;  /* 100px of height + 10px of border */
+  border-bottom-right-radius: 95%; /* 100px of height + 10px of border */
+  border: 7px solid rgb(24, 23, 23);
+  border-bottom: 0;
+  border-left: 0;
+  border-top: 0;
+}
+
+.lista-felinos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  max-width: 120rem;
+  margin: 5rem auto;
+}
+
+.div-felino{
+  width: 55rem;
+  border-radius: .3rem;
+  /* height: 80rem; */
+  height: 95vh;
+  box-shadow: .3rem .3rem .6rem black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0 2rem 0;
+  position: relative;
+  background-color: transparent;
+  
+}
+
+.imagem-felino{
+  
+  width: 95%;
+  height: 50%;
+  border-radius: .3rem;
+  box-shadow: var(--box-shadow-img-felino)
+}
+
+h2{
+  font-size: 5rem;
+  color: var(--h2-color);
+  text-shadow: .2rem .2rem .1rem black;
+}
+
+.paragrafo-felino{
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2.7rem;
+  color: var(--p-color)
+}
+
+.paragrafo-data-criacao{
+  font-size: 1.6rem;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  color: var(--p-color)
+}
+
+.div-descricao-felino{
+  margin: 1rem 2rem 0 2rem;
+}
